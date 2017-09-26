@@ -5,10 +5,16 @@
   </head>
 
   <body>
-    <h1>The following is a table that contains information regarding
-      various occupations in the United States.</h1>
-    {% block content1 %}
-    <h1>rand selected occ</h1>
-    {% endblock %}
+    <h1><center>The following is a table that contains information regarding
+      various occupations in the United States.</center></h1>
+  <table align = "center" border = "1">
+{% for key, value in foo.iteritems() %}
+<tr>
+<th> {{key}} </th>
+<td> {{value}} </td>
+</tr>
+{% endfor %}
+</center>
+</table>
   </body>
 </html>
