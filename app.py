@@ -10,10 +10,15 @@ for row in reader:
 
 app = Flask(__name__)
 
+@app.route('/')
+
+def root():
+        return 'Visit the "/occupations" route for more information'
+
 @app.route('/occupations')
 
 def occupations():
-    return render_template("table.html", foo = occupations_dict)  
+    return render_template("table.html", foo = occupations_dict, woo = getRandOcc())  
 
 def getRandOcc():
     x = random.uniform(0,99.8)
