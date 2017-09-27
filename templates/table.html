@@ -10,7 +10,8 @@
         <table align = "center" border = "1">
             {% for key, value in foo.iteritems() %}
             <tr>
-                <th> <a href="value[1]">{{key}}</a> </th>
+                
+                <th> <a href={{value[1]}}>{{key}}</a> </th>
                 <td> {{value[0]}} </td>
             </tr>
             {% endfor %}
